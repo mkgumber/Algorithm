@@ -18,7 +18,10 @@ class Main{
 		}
 
 	}
-
+	
+	/**
+	*TO DO - Find a better method to calulate Permutation
+	**/
 	private static void calculateAnswer(int n, int k) {
 		if(n==k){
 			System.out.println(1);
