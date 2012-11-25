@@ -26,18 +26,18 @@ class Tries:
 		return pprint.pformat(self.root)
 		
 
+if __name__ == '__main__':
+	tries = Tries() 
+	words = [ "microsoft", "microscope", "amazon","america","amex","minatory","miracle","micro"]
 
-tries = Tries() 
-words = [ "microsoft", "microscope", "amazon","america","amex","minatory","miracle","micro"]
+	for w in words:
+		tries.add_word(w)
+	print tries
 
-for w in words:
-	tries.add_word(w)
-print tries
-
-assert tries.find_word("sexy") is False
-assert tries.find_word("microscope") is True
-assert tries.find_word("mina") is False
-assert tries.find_word("miracle") is True
-assert tries.find_word("micro") is True
+	assert tries.find_word("sexy") is False
+	assert tries.find_word("microscope") is True
+	assert tries.find_word("mina") is False
+	assert tries.find_word("miracle") is True
+	assert tries.find_word("micro") is True
 
 
